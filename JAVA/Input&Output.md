@@ -18,7 +18,7 @@ while(scan.hasNext()){
 }
 ```
 
-### 2.BufferedReader / BufferedWriter
+### 2.BufferedReader / BufferedWriter / StringTokenizer
 - BufferedReader 는 Scanner에 비해 많은양의 데이터를 입력받을경우 효율적이다.(속도)
 - BufferedReader 는 Scanner와 달리 IOException처리를 해주어야 한다.
 - BufferedReader는 라인단위로 입력을 받으며, String 타입이다.
@@ -44,7 +44,13 @@ while((input = br.readLine()) != null){
     //readLine으로 읽은 값이 null이 되면 반복문을 종료
 }
 ```
+- StringTokenizer : StringTokenizer는 readline으로 한번에 받은 것을 나눠주는 역할을 한다.
+```java
+import java.util.*;
+StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
+int a = Integer.parseInt(st.nextToken());
+int b = Integer.parseInt(st.nextToken());
 ### 3. 아스키코드 입출력
 ```java
 int a = System.in.read();
